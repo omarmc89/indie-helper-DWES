@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('location');
             $table->string('enterprise')->nullable();
-            $table->timestamps();
             $table->foreignId('role_id')->constrained('roles');
         });
     }

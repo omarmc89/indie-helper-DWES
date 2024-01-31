@@ -12,7 +12,7 @@ class ArtworkController extends Controller
      */
     public function index()
     {
-        //
+        return Artwork::get();
     }
 
     /**

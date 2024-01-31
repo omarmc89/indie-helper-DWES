@@ -1,13 +1,14 @@
 <?php
 
-use App\Http\Controllers\ArtistController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\OrganiserController;
+use App\Http\Controllers\ArtworkController;
 use App\Http\Controllers\PaintingController;
 use App\Http\Controllers\PhotoController;
-use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,9 @@ Route::apiResource('/paintings', PaintingController::class);
 Route::apiResource('/photos', PhotoController::class);
 Route::apiResource('/users', UserController::class);
 Route::apiResource('/artists', ArtistController::class);
+Route::apiResource('/organisers', OrganiserController::class);
+Route::apiResource('/roles', RoleController::class);
+Route::apiResource('/artworks', ArtworkController::class);
 
 // Creating resources routes
 Route::apiResource('/createRole', RoleController::class);

@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('artists', function (Blueprint $table) {
             $table->id();
             $table->string('nickname');
-            $table->timestamps();
             $table->foreignId('role_id')->constrained('roles');
         });
     }

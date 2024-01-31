@@ -16,9 +16,6 @@ return new class extends Migration
             $table->string('style');
             $table->integer('width');
             $table->integer('height');
-            $table->string('image_url');
-            $table->timestamps();
-
             $table->foreignId('artwork_id')->constrained('artworks');
         });
 
