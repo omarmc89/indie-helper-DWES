@@ -20,10 +20,10 @@ class Role extends Model
     }
 
     public function artist() {
-        return $this->hasOne(Artist::class);
+        return $this->hasMany(Artist::class);
     }
     
     public function organizer() {
-        return $this->hasOne(Organiser::class);
+        return $this->hasMany(Organiser::class);
     }
 }

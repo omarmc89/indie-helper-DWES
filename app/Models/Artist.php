@@ -9,7 +9,11 @@ class Artist extends Model
 {
     protected $table = 'artists';
     protected $primaryKey = 'id';
-    public $timestamps = true;
+    public $timestamps = false;
+
+    protected $fillable = [
+        'nickname',
+    ];
 
     public function role() {
         return $this->hasOne(Role::class);

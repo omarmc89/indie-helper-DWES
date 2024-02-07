@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Organiser;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class OrganiserController extends Controller
 {
@@ -30,9 +31,9 @@ class OrganiserController extends Controller
     public function store(Request $request)
     {
         $user = new User();
-        $user->name = $request -> name;
-        $user -> email = $request -> email;
-        $user -> password = $request -> password;
+        $user->name = $request -> artistForm['name'];
+        $user -> email = $request -> artistForm['email'];
+        $user -> password = $request -> artistForm["password"];
         $user -> save();
 
         $organiser = new Organiser();

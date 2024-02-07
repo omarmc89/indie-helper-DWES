@@ -9,7 +9,7 @@ class Organiser extends Model
 {
     protected $table = 'organisers';
     protected $primaryKey = 'id';
-    public $timestamps = true;
+    public $timestamps = false;
     
     public function rol() {
         return $this->hasOne(Role::class);

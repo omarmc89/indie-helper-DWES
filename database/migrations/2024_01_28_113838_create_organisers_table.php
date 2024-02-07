@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('location');
             $table->string('enterprise')->nullable();
-            $table->foreignId('role_id')->constrained('roles');
+            $table->foreignId('role_id')->constrained('roles')->onDelete('cascade');
         });
     }
 

@@ -11,7 +11,7 @@ class Photo extends Model
     
     protected $table = 'photos';
     protected $primaryKey = 'id';
-    public $timestamps = true;
+    public $timestamps = false;
 
     public function artwork() {
         return $this->hasOne(Artwork::class);

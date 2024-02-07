@@ -11,7 +11,7 @@ class Painting extends Model
 
     protected $table = 'paintings';
     protected $primaryKey = 'id';
-    public $timestamps = true;
+    public $timestamps = false;
 
     public function artwork() {
         return $this->hasOne(Artwork::class);
